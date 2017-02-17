@@ -8,4 +8,4 @@ repository for quick call.
 
 ### KDE Plot
 
-![](img/kde2d.png)
+![](img/kde2d.png | width=300)
