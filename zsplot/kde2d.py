@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+from scipy.stats.kde import gaussian_kde
+import numpy as np
 
 def kde2d(x, y, color="C0", linewidths=1, axes=None, axis=None, **kwargs):
     """Make a 2d plot of scattered points and their 1d KDE on the sides of the plot.
@@ -54,7 +56,7 @@ def kde2d(x, y, color="C0", linewidths=1, axes=None, axis=None, **kwargs):
     py = py/sum(py)
 
     # Set up base figure
-    base.plot(x,y, marker="o", linewidth=0, color=color, markersize=4, **kwargs)
+    base.plot(x,y, marker="o", linewidth=0, color=color, **kwargs)
     base.spines["right"].set_visible(False)
     base.spines["top"].set_visible(False)
     if axis is not None:
